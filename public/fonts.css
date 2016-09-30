@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Stq';
+  src: url("./fonts/itc-officina-sans-lt-bold.ttf");
+  font-weight: normal;
+  font-style: bold; }
+
+@font-face {
+  font-family: 'Stq-book';
+  src: url("./fonts/itc-officina-sans-lt-book.ttf");
+  font-weight: normal;
+  font-style: normal; }

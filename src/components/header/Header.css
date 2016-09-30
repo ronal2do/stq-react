@@ -1,0 +1,114 @@
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+@media (min-width: 992px) {
+  .header-inner {
+      background: transparent;
+  }
+}
+@media (min-width: 768px) {
+  .header-inner {
+      padding: 8px 20px 10px;
+  }
+}
+.header-inner {
+    padding: 10px;
+    -webkit-transition: background 0.5s ease-out;
+    -moz-transition: background 0.5s ease-out;
+    -ms-transition: background 0.5s ease-out;
+    -o-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out;
+    border-bottom: none;
+    width: 100%;
+    opacity: 1;
+    -webkit-animation: fadeInDown 0.5s cubic-bezier(.16, .68, .43, .99);
+    -moz-animation: fadeInDown 0.5s cubic-bezier(.16, .68, .43, .99);
+    -ms-animation: fadeInDown 0.5s cubic-bezier(.16, .68, .43, .99);
+    -o-animation: fadeInDown 0.5s cubic-bezier(.16, .68, .43, .99);
+    animation: fadeInDown 0.5s cubic-bezier(.16, .68, .43, .99);
+}
+
+.Logo {
+    font-family: 'Stq';
+    color: #fff;
+}
+
+.Logo {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+.Logo-container--visible {
+    font-weight: 600;
+    overflow: hidden;
+    height: 27px;
+    padding: 0 27px;
+}
+.Logo p {
+    font-family: 'Stq';
+    color: #fff;
+    font-size: 1.3em;
+    display: inline;
+    float: left;
+    margin: -3px;
+}
+.Logo a ul li {
+    font-family: 'Stq-book';
+    line-height: 25px;
+}
+@media (min-width: 768px){
+  .menu-button {
+      right: 20px;
+  }
+}
+.menu-button {
+    cursor: pointer;
+    display: block;
+    width: 25px;
+    height: 20px;
+    right: 10px;
+    position: absolute;
+}
+
+.menu-button .before, .menu-button .main, .menu-button .after {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 5px;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    -ms-transition: -ms-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+.header-inner.scrolled {
+    background: rgba(0, 43, 69, 0.73);
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -ms-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+}
+.menu-button:hover .before {
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+.menu-button:hover .after {
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+    transform: translateY(2px);
+}

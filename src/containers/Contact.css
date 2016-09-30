@@ -1,0 +1,281 @@
+
+.col-xs-12 {
+    width: 100%;
+}
+
+@media (min-width: 1200px){
+  .col-lg-offset-1 {
+      margin-left: 8.33333333%;
+  }
+}
+@media (min-width: 1200px){
+  .col-lg-10 {
+      width: 83.33333333%;
+  }
+}
+p {
+  font-size: 14px;
+}
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+.center {
+    text-align: center;
+}
+@media (min-width: 768px){
+  .switch {
+      bottom: 20px;
+  }
+}
+.switch {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 20px;
+    z-index: 100;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+    border: none;
+}
+
+.radio {
+    position: relative;
+    width: 45px;
+    height: 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+}
+.radio.active .elipse {
+    left: 50%;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.elipse {
+    position: absolute;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    top: 1px;
+    left: 1px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.9);
+}
+.switch h5 {
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.9);
+}
+#contactform fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@media (min-width: 768px){
+  .form-field span input, .form-field span textarea {
+      margin-bottom: 25px;
+  }
+}
+
+.form-field span {
+    display: block;
+}
+
+.form-field span input, .form-field span textarea {
+    border: none;
+    outline: none;
+    padding: 15px 0px;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    border-radius: 0px;
+    color: rgba(255,255,255,.5);
+    /* font-family: 'Cardo', serif; */
+    text-transform: lowercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+@media (min-width: 768px){
+  .form-field span input, .form-field span textarea {
+      margin-bottom: 25px;
+  }
+}
+.form-field span textarea {
+    font-size: 16px;
+    overflow: auto;
+    height: 100px;
+    padding: 15px 0px;
+}
+@media (min-width: 1200px){
+  .float-right {
+      margin: 30px 0px 0px;
+      width: 50%;
+      float: right;
+      padding-left: 15px;
+  }
+  .float-left {
+    margin: 30px 0px 0px;
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+  }
+  .form-field span textarea {
+    font-size: 18px;
+    height: 181px;
+  }
+  textarea {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .form-field span input, .form-field span textarea {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+}
+@media (min-width: 1200px){
+  .form-click button {
+      font-size: 12px;
+      padding: 25px 0px;
+  }
+}
+@media (min-width: 768px){
+  .form-click button {
+      padding: 20px 0px;
+  }
+}
+.form-click button {
+    display: inline-block;
+    position: relative;
+    border: none;
+    font-family: 'stq', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.6);
+    padding: 15px 0px;
+    width: 100%;
+    background: rgba(255,255,255,.1);
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+[disabled] {
+    color: rgba(255, 255, 255, 0.31)!important;
+    border: 1px solid rgba(255, 255, 255, 0.25)!important;
+}
+@media (min-width: 768px){
+  .left {
+      text-align: left;
+  }
+}
+@media (min-width: 992px){
+  .col-md-offset-3 {
+      margin-left: 25%;
+  }
+}
+@media (min-width: 992px){
+  .col-md-6 {
+      width: 50%;
+  }
+}
+.dark p {
+    color: #fff;
+}
+@media (min-width: 1200px){
+  .map-overlay {
+      padding-bottom: 200px;
+  }
+  .form-click button {
+    font-size: 12px;
+    padding: 25px 0px;
+  }
+}
+
+@media (min-width: 768px){
+  .map-overlay {
+      padding-bottom: 150px;
+  }
+}
+.map-overlay {
+    background: rgba(0,43,69,.9);
+    padding-bottom: 130px;
+}
+.opacity {
+  opacity: 0;
+}
+.mapa {
+  overflow: hidden;
+  z-index: -100;
+}
+.mapa-ativo {
+  overflow: hidden;
+  z-index: 1;
+}
+.map-overlay {
+    background: rgba(0,43,69,.9);
+    padding-bottom: 130px;
+}
+@media (min-width: 1200px){
+  .map-overlay {
+      padding-bottom: 200px;
+  }
+}
+
+@media (min-width: 768px){
+  .map-overlay {
+      padding-bottom: 150px;
+  }
+}
+
+#map {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}

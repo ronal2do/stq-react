@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+    color: #002b45;
+    background-color: #002b45;
+    font-family: 'Stq-book';
+}
+.Logo {
+    font-family: 'Stq';
+    color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0 none;
+  border: none; }
+
+li {
+  list-style: none outside none; }
+
+html, body {
+  border: 0 none; }
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none; }
+
+body {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 400;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Stq-book', 'georgia', serif;
+  letter-spacing: 0.015em;
+  font-weight: 500; }
+
+body {
+  color: #002b45;
+  font-family: 'Stq-book'; }
+
+.titulo {
+  font-family: 'Stq';
+  text-transform: lowercase;
+  white-space: nowrap;
+  z-index:92;}
+
+.cinza-claro {
+  color: #e5e5e5; }
+
+.branco {
+  color: white; }
+
+.azul {
+  color: #002b45; }
+
+.fundo-cinza {
+  background-color: #e5e5e5; }
+.fundo-branco{
+  background-color:#fff;
+}
+.fundo-preto {
+  background-color: #000; }
+.fundo-verde {
+  background-color: #dbea30;
+  margin-top: 0; }
+
+.fundo-azul {
+  background-color: #002b45;
+  color: white; }
+  .fundo-azul .fundo-verde {
+    color: #002b45; }
+
+.grade {
+  background-image: url("./images/site/grade-reverse.png");}
+
+.galeria {
+  background-image: url("./images/portfolio/travessia/mm3.jpg");
+  background-size:cover;
+  height:750px;
+}
+
+.verde {
+  color: #dbea30; }
+
+.overlay-azul {
+  background-color: rgba(0, 43, 69, 0.9); }
+
+.overlay-verde {
+  color: rgba(219, 234, 48, 0.1); }
+
+.title {
+  font-size: 60px; }
+
+.title-min {
+  font-size: 46px; }
+
+.box {
+  margin: 0;
+  width: 100%;
+  overflow: hidden; }
+
+.box-inner {
+  padding:50px;
+  position: relative;
+  margin: 0px;
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5 {
+  color: white; }
+
+h1 .titulo {
+  font-size: 96px; }
+h2 .titulo {
+  font-size: 96px; }
+h4 {
+  font-size: 3rem; }
+
+::-moz-selection {
+  background-color: #dbea30; }
+
+::selection {
+  background-color: #dbea30; }
+
+.verde::-moz-selection {
+  background-color: #dbea30;
+  color: white; }
+
+.verde::selection {
+  background-color: #dbea30;
+  color: white; }
+
+.fundo-azul::-moz-selection {
+  background-color: #dbea30;
+  color: #002b45; }
+
+.fundo-azul::selection {
+  background-color: #dbea30;
+  color: #002b45; }
+
+.padding {
+  padding: 20px; }
+
+.centered {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.box-seta {
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  border-color: #fff;
+}
+
+.triangle-down {
+  padding-top: 10px;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 120px solid #fff;
+  border-bottom: 0px solid transparent; }
+
+#bg_pattern {
+  background-image: url("./images/site/grade.png");
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 91;
+  opacity: 0.2; }
+
+#full-size {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ }
+
+.grade-reverse {
+  background-image: url("./images/site/grade.png");}
+.chumbo{color:rgb(43, 40, 37);}
+.fundo-chumbo{background-color:rgb(43, 40, 37);}
+.selo-box{
+  position:relative;
+  margin:auto;
+}
+.selo{
+  width:240px;
+  height:240px;
+  background-color:#002b45;
+  color:#fff;
+  margin:auto;
+  padding-top:35px;
+}
+.bad{
+  position: relative;
+  margin-left: 690px;
+  margin-top: -52px;
+  font-size: 1.5rem;
+}
+.bad>ul{
+  text-align:left;
+  text-decoration:none;
+  color:#002b45;
+}
+.loader-content{}
+/** Welcome page */
+.rsABlock>h2{font-size:7rem;}
+.rsABlock>p{white-space: nowrap;font-size:22px;}
+#qqr{}
+.segundo-titulo{
+  text-align: left;
+  padding:0 5%;}
+.padding-cem{padding-top:100px;}
+
+/* aplica somente a partir de 320px */
+@media screen and (min-width: 320px) {
+ .segundo-titulo{padding:0 10px;}
+  h2.titulo{font-size:50px;white-space: normal;}
+  .branco{font-size:30px;white-space: normal;}
+  .maior{font-size: 1rem;}
+  .rsABlock>h2{font-size:3rem;}
+     .rsABlock>p{white-space: normal;font-size:18px;}
+}
+
+/* aplica somente a partir de 480px em landscape */
+@media screen and (min-width: 480px) and (orientation: landscape) {
+ .segundo-titulo{padding:0 10px;}
+  h2.titulo{font-size:75px;}
+  .branco{font-size:30px;white-space: normal;}
+  .maior{font-size: 1rem;}
+  .rsABlock>h2{font-size:6rem;}
+     .rsABlock>p{white-space: normal;font-size:18px;}
+}
+@media screen and (min-width: 480px) and (orientation: portrait) {
+ .segundo-titulo{padding:0 10px;}
+  h2.titulo{font-size:60px;}
+  .branco{font-size:30px;white-space: normal;}
+  .maior{font-size: 1rem;}
+  .rsABlock>h2{font-size:5rem;}
+     .rsABlock>p{white-space: normal;font-size:18px;}
+}
+
+@media only screen and (min-device-width: 580px) and (orientation: landscape){
+  .rsABlock>h2{font-size:7rem;}
+    h2.titulo{font-size:85px;}
+    .branco{font-size:2.4rem;white-space: normal;}
+      .maior{font-size: 1.2rem;}
+   .segundo-titulo{
+  text-align: left;
+  padding:0 5%;}
+     .rsABlock>p{white-space: nowrap;font-size:22px;}
+}
+@media only screen and (min-device-width: 1280px) and (orientation: landscape){
+  .rsABlock>h2{font-size:7rem;}
+    h2.titulo{font-size:125px;}
+    .branco{font-size:2.4rem;white-space: normal;}
+      .maior{font-size: 1.2rem;}
+   .segundo-titulo{
+  text-align: left;
+  padding:0 5%;}
+       .rsABlock>p{white-space: nowrap;font-size:22px;}
+}
+@media only screen and (min-device-width: 1024px) and (orientation: landscape){
+  .rsABlock>h2{font-size:7rem;}
+    h2.titulo{font-size:105px;}
+    .branco{font-size:2.4rem;white-space: normal;}
+      .maior{font-size: 1.2rem;}
+   .segundo-titulo{
+  text-align: left;
+  padding:0 5%;}
+}
+.inner-titulo{
+  text-align: left;
+  position:relative;
+  width:91%;
+  height:101%;
+}
+
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.logo{text-indent:-9999px;}
+a {outline: none;}
+.padding-oitenta{padding-top:80px;}
+audio{width: 100%;}

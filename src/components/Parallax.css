@@ -1,0 +1,26 @@
+.react-parallax-content {
+  min-height: 100vh;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.react-parallax-bgimage {
+  background-position: top center;
+}
+.react-parallax-content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/site/grade-reverse.png);
+    opacity: .5;
+}
+.container {
+  z-index: 10;
+}

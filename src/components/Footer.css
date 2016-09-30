@@ -1,0 +1,38 @@
+footer {
+  padding: 5px 0px;
+}
+.fundo-azul {
+  background-color: #002b45;
+  color: white;
+}
+.Footer-social {
+  padding-top: 12px;
+}
+.Footer-copyright {
+  padding-top: 14px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.Footer-social ul li {
+    display: inline;
+}
+li {
+    list-style: none outside none;
+}
+.Footer-social ul li a {
+    color: #fff;
+    font-size: 1.3em;
+    padding: 0 0.4em;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+a:active, a:visited {
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,65 @@
+.titulo{
+  font-size: 150px;
+}
+.video-background {
+    overflow: hidden;
+    position: relative;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+    border: none;
+}
+
+section, summary {
+    display: block;
+}
+#wrap {
+    display: block;
+}
+#bgVideo {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0s;
+    -moz-transition: -moz-transform 0s;
+    -ms-transition: -ms-transform 0s;
+    -o-transition: -o-transform 0s;
+    transition: transform 0s;
+}
+#bgVideo > video {
+    display: block;
+    position: absolute!important;
+    top: 0;
+    z-index: -1!important;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+}
+video {
+    outline: 0;
+}
+
+.titulo {
+    font-family: 'Stq';
+    text-transform: lowercase;
+    white-space: nowrap;
+    z-index: 92;
+}
+.video-background:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 43, 69, 0.1);
+    background-image: url('http://stqpublicidade.com.br/images/site/grade-reverse.png');
+    z-index: 1;
+}
