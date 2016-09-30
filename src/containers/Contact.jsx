@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Contact.css';
+import Mapa from '../components/Mapa';
 
 class Contact extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Contact extends Component {
     this.handleChange = this.handleChange.bind(this);
 
   }
-
+  
   handleChange() {
     this.setState({
       radio: !this.state.radio,
@@ -90,8 +91,8 @@ class Contact extends Component {
       </div>
 
 
-      <div id="map" className={`clearfix ${mapa}`} style={{background: 'green'}}>
-        <div style={{ background: 'red', height: '100%', width: '100%' }}/>
+      <div id="map" className={`clearfix ${mapa}`}>
+        <Mapa lat={-23.5985647} lng={-46.6822518} />
       </div>
 
   </section>
