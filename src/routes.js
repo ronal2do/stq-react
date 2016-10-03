@@ -8,6 +8,6 @@ import Campanha from './containers/Campanha';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={JobsList} />
-    <Route path="/:campanha" component={Campanha} />
+    <Route path="/campanhas/:slug" component={Campanha} />
   </Route>
 );

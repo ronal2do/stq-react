@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchJob } from '../actions/index';
+
 import './Campanha.css';
 
 class Campanha extends Component {
@@ -8,8 +10,16 @@ class Campanha extends Component {
 
     this.state = { };
   }
-
+  componentWillMount() {
+    this.props.fetchJob(this.props.params.slug);
+  }
   render() {
+    const job = this.props.job;
+
+    if (!this.props.job) {
+       return <div>is loading...</div>;
+    }
+
     return (
       <div>
         <section id="qqr" className="hero padded dark center nav-trigger text-left poster" style={{backgroundImage: 'url(images/site/somos.jpg)'}}>
@@ -20,7 +30,7 @@ class Campanha extends Component {
                   <h2 className="titulo verde">_somos sbc</h2>
                   <p className="branco maior">_</p>
                   <p className="branco"></p>
-                  <h4 className="branco">Somos São Bernardo.<br /></h4>
+                  <h4 className="branco">{job.title}<br /></h4>
                   <p><span className="branco maior">Somos participação.<br />_<br />_</span></p>
               </div>
           </div>
@@ -36,12 +46,8 @@ class Campanha extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+function mapStateToProps(state) {
+  return { job: state.jobs.job }
+}
 
-});
-
-const mapDispatchToProps = (dispatch) => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Campanha);
+export default connect(mapStateToProps, { fetchJob })(Campanha);

@@ -15,7 +15,7 @@ class Section extends Component {
         bgImage={this.props.bg} >
         <div className="container">
           {this.props.children}
-          <Link className="h2" to={this.props.slug}>[+]</Link>
+          <Link className="h2" to={`/campanhas/${this.props.slug}`}>[+]</Link>
         </div>
 
       </Parallax>
