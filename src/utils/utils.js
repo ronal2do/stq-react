@@ -116,41 +116,7 @@ function initializeMaven() {
 	);
 	wow.init();
 
-	//CONTACT-FORM
 
-	//MAP
-	$('.radio').click(function (){
-		$(this).toggleClass('active');
 
-		if ($('.radio').hasClass('active')) {
-			$('.map-overlay').animate({
-				opacity: 0
-			}, 200);
-			$('#map').css({
-				"z-index" : 1
-			});
-		} else {
-			$('.map-overlay').animate({
-				opacity: 1
-			}, 200);
-			$('#map').css({
-				"z-index" : - 100
-			});
-		}
-	});
-
-	//SWITCHER
-	$('.trigger').click(function(){
-		if ($('#customizer').hasClass('opened')){
-			$('#customizer').animate({left:'-158px'}, 300, function(){
-				$('#customizer').removeClass('opened');
-			});
-		} else {
-			$('#customizer').animate({left:0}, 300, function(){
-				$('#customizer').addClass('opened');
-			});
-		}
-		return false;
-	});
 
 };

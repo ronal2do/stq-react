@@ -1,68 +1,64 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { toogleMenu } from '../../actions/index';
-import { bindActionCreators } from 'redux';
-import { Link } from 'react-router';
 
+import Logo from './Logo';
+import Navigation from './Navigation';
 import './Header.css';
 
-
 class Header extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+      super(props)
 
-    this.state = { scroll: '' };
+      this.state = {
+        isScrolled: true,
+        isOpenned: false
+      }
+    }
+
+    handleScroll = () => {
+      if (((window.innerHeight + window.scrollY) >= document.body.offsetHeight) && !this.state.isScrolled) {
+        this.setState({
+          isScrolled: true,
+        });
+        // Load more content
+
+        // Only call after loading finishes
+        this.setState({
+          isScrolled: false,
+        });
+
+      }
+    }
+
+  handleClick() {
+    this.setState({isOpenned: !this.state.isOpenned});
   }
 
-  // componentDidMount(){
-  //     window.addEventListener('scroll', this.handleScroll);
-  //       this.setState({ scroll: 'scrolled' });
-  // }
-  // componentWillUnmount() {
-  //     window.removeEventListener('scroll', this.handleScroll);
-  // }
-  //
-  // handleScroll(event) {
-  //     this.setState({ scroll: 'scrolled' });
-  // }
+  componentDidMount = () => window.addEventListener('scroll', this.handleScroll)
+
+  componentWillUnmount = () => window.removeEventListener('scroll', this.handleScroll)
 
   render() {
-    const { toogleMenu } = this.props
+    const contentClass = this.state.isOpenned ? 'menu-button active' : 'menu-button';
+
     return (
       <header>
-          <div className={"header-inner " + this.state.scroll }>
-              <div className="Logo">
-                  <div className="Logo-container">
-                      <div className="Logo-container--visible">
-                          <Link to="/">
-                              <p>stq </p>
-                              <ul>
-                                  <li style={{lineHeight: '27px'}}>_branding</li>
-                                  <li style={{lineHeight: '29px'}}>_advertising</li>
-                                  <li>_digital</li>
-                              </ul>
-                          </Link>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="mn" style={{paddingTop: '15px'}}>
+          <Logo isScrolled={this.state.isScrolled}/>
+
+          <div className="mn">
               <div
-                onClick={() => toogleMenu(1)}
-                className="menu-button"
-                style={{top:'16.5px'}}>
+                onClick={() => this.handleClick()}
+                className={contentClass}
+              >
                   <span className="before"></span>
                   <span className="main"></span>
                   <span className="after"></span>
               </div>
+              <Navigation isOpenned={this.state.isOpenned}/>
           </div>
+          <div className="navigation-overlay"></div>
       </header>
     );
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ toogleMenu }, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(Header);
+export default Header;

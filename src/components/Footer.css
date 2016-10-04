@@ -8,8 +8,9 @@ footer {
 .Footer-social {
   padding-top: 12px;
 }
-.Footer-copyright {
-  padding-top: 14px;
+.Footer-copyright p {
+    padding-top: 14px;
+    text-align: center;
 }
 ul {
     list-style: none;

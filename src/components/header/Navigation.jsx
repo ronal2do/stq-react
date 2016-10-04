@@ -1,27 +1,12 @@
 //Button: onClick={()=>{dispatch(changeColor())}}
-
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { Link } from 'react-router';
+
 import './Navigation.css';
 
 class Navigation extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isOpenned: false
-    };
-  }
-  componentDidMount() {
-    console.log(this.state);
-  }
-
-  handleClick() {
-    this.setState({isOpenned: !this.state.isOpenned});
-  }
-
   render() {
-    const contentClass = this.state.isOpenned ? 'push-nav fundo-azul grade push-open' : 'push-nav fundo-azul grade push-right';
+    const contentClass = this.props.isOpenned ? 'push-nav fundo-azul grade push-open' : 'push-nav fundo-azul grade push-right';
 
     return (
       <nav className={contentClass}>
@@ -29,7 +14,7 @@ class Navigation extends Component {
 
           <div className="col-sm-6 ">
               <div className="h1 titulo text-align-left">
-                <h2 className="stq" style={{fontSize:'78px'}}>stq</h2> <br />
+                <h2 className="stq">stq</h2> <br />
                 <ul className="Bad">
                   <li><strong>_Branding</strong></li>
                   <li><strong>_Advertising</strong></li>
@@ -41,13 +26,11 @@ class Navigation extends Component {
           </div>
 
           <div className="col-sm-6">
-            <br />
-            <br />
-            <br />
+            <br/>
             <ul className="navigation skillsDouble">
-                  <li><a className="scroll-to" href="/">_home</a></li>
-                  <li><a className="scroll-to" href="/#somossbc">_trabalhos</a></li>
-                  <li><a className="scroll-to" href="#contato">_contato</a></li>
+                  <li><Link className="scroll-to" to="/" >_home</Link></li>
+                  <li><Link className="scroll-to" to="/#trabalhos" >_trabalhos</Link></li>
+                  <li><Link className="scroll-to" to="/#contato" >_contato</Link></li>
                   <li>
                   <br />
                       <a className="icone-social" href="https://www.facebook.com/STQPublicidade/" target="_blank"><i className="fa fa-facebook fa-fw"></i></a>
@@ -56,13 +39,9 @@ class Navigation extends Component {
               </ul>
           </div>
         </div>
-    </nav>
+      </nav>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-    toogleMenu: state.isOpenned
-});
-
-export default connect(mapStateToProps)(Navigation);
+export default Navigation;

@@ -34,6 +34,7 @@ class JobsList extends Component {
     return (
       <section>
         <Hero />
+        <div id="trabalhos"></div>
         { this.renderList() }
       </section>
     );

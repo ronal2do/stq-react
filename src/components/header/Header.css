@@ -73,10 +73,14 @@ header {
     display: block;
     width: 25px;
     height: 20px;
-    right: 10px;
+    right: 15px;
+    top: 15px;
     position: absolute;
+    z-index: 999;
 }
-
+.menu-button.active {
+  top: 18px;
+}
 .menu-button .before, .menu-button .main, .menu-button .after {
     display: block;
     width: 25px;
@@ -111,4 +115,33 @@ header {
     -ms-transform: translateY(2px);
     -o-transform: translateY(2px);
     transform: translateY(2px);
+}
+.menu-button.active .before {
+    margin: 0;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transform: translateY(2px) rotate(45deg);
+    -moz-transform: translateY(2px) rotate(45deg);
+    -ms-transform: translateY(2px) rotate(45deg);
+    -o-transform: translateY(2px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
+}
+.menu-button.active .main {
+    display: none;
+}
+.menu-button.active .after {
+    margin: 0;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transform: translateY(0) rotate(-45deg);
+    -moz-transform: translateY(0) rotate(-45deg);
+    -ms-transform: translateY(0) rotate(-45deg);
+    -o-transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(-45deg);
 }
