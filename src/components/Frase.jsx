@@ -4,7 +4,8 @@ export default class Frase extends React.Component {
   render() {
     const { title, text } = this.props;
     return (
-      <div className="row">
+      <div className="container">
+        <div className="row">
           <div className="col-sm-4 wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
               <div className="segundo-titulo">
                   <p className="azul maior">_</p>
@@ -17,6 +18,7 @@ export default class Frase extends React.Component {
           </div>
            <div className="col-sm-8 wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
           </div>
+        </div>
       </div>
     );
   }
