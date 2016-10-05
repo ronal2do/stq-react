@@ -20,6 +20,7 @@ class JobsList extends Component {
       return (
         <Section
           key={job._id}
+          id={job._id}
           bg={`http://stqpublicidade.com.br/images/site/` + job.slug + `.jpg`}
           slug={job.slug}>
           <h1 className="h1">{job.title}</h1>

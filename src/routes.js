@@ -10,6 +10,6 @@ import Campanha from './containers/Campanha';
 export default (
   <Route path="/" component={App} onEnter={scrollBefore}>
     <IndexRoute component={JobsList} onEnter={scrollBefore} />
-    <Route path="/campanhas/:slug" component={Campanha} onEnter={scrollBefore} />
+    <Route path="/campanhas/:id" component={Campanha} onEnter={scrollBefore} />
   </Route>
 );

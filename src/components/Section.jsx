@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 import './Parallax.css';
 
 class Section extends Component {
-
   render() {
     return (
       <Parallax
@@ -15,7 +14,7 @@ class Section extends Component {
         bgImage={this.props.bg} >
         <div className="container">
           {this.props.children}
-          <Link className="h2" to={`/campanhas/${this.props.slug}`}>[+]</Link>
+          <Link className="h2" to={`/campanhas/${this.props.id}`}>[+]</Link>
         </div>
 
       </Parallax>

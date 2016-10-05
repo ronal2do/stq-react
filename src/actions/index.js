@@ -26,7 +26,7 @@ export function createJob(props) {
 }
 
 export function fetchJob(id) {
-  const request = axios.get(`${ROOT_URL}/campaigns/${id}`);
+  const request = axios.get(`${ROOT_URL}/jobs/${id}`);
 
   return {
     type: FETCH_JOB,
