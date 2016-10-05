@@ -40,7 +40,6 @@ class Form extends Component {
                                     </div>
                               </div>
                               <div className="form-field email wow fadeInUp">
-                                   <div style={{padding:'10px'}}></div>
                                   <span>
                                     <input
                                         type="email"
@@ -54,7 +53,7 @@ class Form extends Component {
                               </div>
                           </div>
                           <div className="float-right">
-                              <div className="form-field message wow fadeInUp" style={{height: '159px'}}>
+                              <div className="form-field message wow fadeInUp">
                                    <div style={{padding:'10px'}}></div>
                                   <span>
                                     <textarea
@@ -97,13 +96,13 @@ function validate(values) {
   const errors = {};
 
   if (!values.name) {
-    errors.name = 'Enter a name';
+    errors.name = 'Entre com um nome válido';
   }
   if (!values.email) {
-    errors.email = 'Enter a email';
+    errors.email = 'Entre com um email válido';
   }
   if (!values.message) {
-    errors.message = 'Enter a message';
+    errors.message = 'Insira sua mensagem';
   }
   return errors;
 }

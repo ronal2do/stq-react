@@ -164,8 +164,8 @@ fieldset {
   }
   .form-field span input, .form-field span textarea {
     font-size: 20px;
-    margin-bottom: 50px;
-}
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 1200px){
   .form-click button {
@@ -277,4 +277,12 @@ button[disabled], html input[disabled] {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.form-field span input:focus, .form-field span textarea:focus {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.text-help {
+    background: #a8d000;
+    margin-bottom: 30px;
 }

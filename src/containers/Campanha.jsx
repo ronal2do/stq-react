@@ -4,6 +4,8 @@ import { fetchJob } from '../actions/index';
 
 import './Campanha.css';
 
+import Piece from '../components/Piece';
+
 class Campanha extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,7 @@ class Campanha extends Component {
        return <div>is loading...</div>;
     }
     const bgImage = { backgroundImage: 'url(/images/site/' + job.slug + '.jpg)' };
-    console.log(bgImage);
+
     return (
       <div>
         <section id="qqr" className="hero padded dark center nav-trigger text-left poster" style={bgImage}>
@@ -39,7 +41,18 @@ class Campanha extends Component {
               [v]
           </a>
       </section>
-        {job.pieces.map(pieces => {return (<li key={pieces._id}>{pieces.title}</li>)})}
+        {job.pieces.map(pieces => {
+          return (
+            <Piece
+              key={pieces._id}
+              title={pieces.title}
+              type={pieces.type}
+              file={pieces.file}
+              classe={pieces.classe}
+              text={pieces.text}
+            />
+          )
+        })}
       </div>
     );
   }
