@@ -74,10 +74,9 @@ class Form extends Component {
                           <button type="submit"
                           >enviar</button>
                       </div>
-                          <div className="padding"></div>
+                      <div className="padding"></div>
 
-
-                        <div className="row text-left" style={{ textAlign: 'left'}}>
+                      <div className="row text-left" style={{ textAlign: 'left'}}>
                           <div className="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 left">
                               <p>_</p>
                               <p>rua gomes de carvalho 921, 5º andar _são paulo</p>

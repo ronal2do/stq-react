@@ -361,7 +361,7 @@ Inside `index.html`, you can use it like this:
 
 Only files inside the `public` folder will be accessible by `%PUBLIC_URL%` prefix. If you need to use a file from `src` or `node_modules`, you’ll have to copy it there to explicitly specify your intention to make this file a part of the build.
 
-When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` with a correct absolute path so your project works even if you use client-side routing or host it at a non-root URL. 
+When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` with a correct absolute path so your project works even if you use client-side routing or host it at a non-root URL.
 
 In JavaScript code, you can use `process.env.PUBLIC_URL` for similar purposes:
 
@@ -424,7 +424,7 @@ node_modules/fbjs/lib/shallowEqual.js.flow:29
                                    ^^^^^^^^^^ identifier `$FlowIssue`. Could not resolve name
 ```
 
-To fix this, change your `.flowconfig` to look like this:
+To fix this, change your `.`flowconfig`` to look like this:
 
 ```ini
 [ignore]

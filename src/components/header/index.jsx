@@ -9,33 +9,39 @@ class Header extends Component {
       super(props)
 
       this.state = {
-        isScrolled: true,
+        isScrolled: false,
         isOpenned: false
       }
     }
 
-    handleScroll = () => {
-      if (((window.innerHeight + window.scrollY) >= document.body.offsetHeight) && !this.state.isScrolled) {
-        this.setState({
-          isScrolled: true,
-        });
-        // Load more content
+    componentDidMount = () => {
+     global.addEventListener('scroll', this.handleScroll);
+   };
 
-        // Only call after loading finishes
-        this.setState({
-          isScrolled: false,
-        });
+   componentWillUnmount = () => {
+     global.removeEventListener('scroll', this.handleScroll);
+   };
 
-      }
-    }
+   handleScroll = () => {
+     const {isScrolled} = this.state;
+
+     if (global.scrollY > 500 && !isScrolled) {
+       console.log('> 500');
+       this.setState({
+         isScrolled: true,
+       });
+     }
+     else if (global.scrollY <= 500 && isScrolled) {
+       console.log('<= 500');
+       this.setState({
+         isScrolled: false,
+       });
+     }
+   };
 
   handleClick() {
     this.setState({isOpenned: !this.state.isOpenned});
   }
-
-  componentDidMount = () => window.addEventListener('scroll', this.handleScroll)
-
-  componentWillUnmount = () => window.removeEventListener('scroll', this.handleScroll)
 
   render() {
     const contentClass = this.state.isOpenned ? 'menu-button active' : 'menu-button';
@@ -53,7 +59,7 @@ class Header extends Component {
                   <span className="main"></span>
                   <span className="after"></span>
               </div>
-              <Navigation isOpenned={this.state.isOpenned}/>
+              <Navigation isOpenned={this.state.isOpenned} />
           </div>
           <div className="navigation-overlay"></div>
       </header>
