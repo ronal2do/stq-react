@@ -44,7 +44,7 @@ class Campanha extends Component {
         {job.pieces.map(pieces => {
           return (
             <Piece
-              key={pieces._id}
+              key={pieces.key}
               title={pieces.title}
               type={pieces.type}
               file={pieces.file}

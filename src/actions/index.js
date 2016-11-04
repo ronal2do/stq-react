@@ -5,7 +5,7 @@ export const CREATE_JOB = 'CREATE_JOB';
 export const FETCH_JOB = 'FETCH_JOB';
 export const SEND_CONTACT = 'SEND_CONTACT';
 
-const ROOT_URL = 'http://localhost:3001/api';
+const ROOT_URL = 'http://localhost:3005/api';
 
 export function fetchJobs() {
   const request = axios.get(`${ROOT_URL}/jobs`);
