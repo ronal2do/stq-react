@@ -3,7 +3,7 @@ export function submitContactForm(name, email, message) {
     dispatch({
       type: 'CLEAR_MESSAGES'
     });
-    return fetch('http://localhost:3005/api/contact', {
+    return fetch(process.env.API,'/contact', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

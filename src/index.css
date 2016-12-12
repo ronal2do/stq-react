@@ -310,3 +310,5 @@ h4 {
 a {outline: none;}
 .padding-oitenta{padding-top:80px;}
 audio{width: 100%;}
+
+input, textarea, select, a, button, button:focus { outline: none; }

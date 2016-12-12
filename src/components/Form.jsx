@@ -8,6 +8,7 @@ class Form extends Component {
   };
 
   onSubmit(props) {
+    console.log(props);
     this.props.createContact(props)
       .then(() => {
         this.context.router.push("/");

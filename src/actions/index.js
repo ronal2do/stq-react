@@ -5,10 +5,10 @@ export const CREATE_JOB = 'CREATE_JOB';
 export const FETCH_JOB = 'FETCH_JOB';
 export const SEND_CONTACT = 'SEND_CONTACT';
 
-const ROOT_URL = 'http://localhost:3005/api';
+const API = process.env.API || 'http://localhost:3005/api';
 
 export function fetchJobs() {
-  const request = axios.get(`${ROOT_URL}/jobs`);
+  const request = axios.get(`${API}/jobs`);
 
   return {
     type: FETCH_JOBS,
@@ -17,7 +17,7 @@ export function fetchJobs() {
 }
 
 export function createJob(props) {
-  const request = axios.post(`${ROOT_URL}/jobs`, props);
+  const request = axios.post(`${API}/jobs`, props);
 
   return {
     type: CREATE_JOB,
@@ -26,7 +26,7 @@ export function createJob(props) {
 }
 
 export function fetchJob(id) {
-  const request = axios.get(`${ROOT_URL}/jobs/${id}`);
+  const request = axios.get(`${API}/jobs/${id}`);
 
   return {
     type: FETCH_JOB,
@@ -35,7 +35,7 @@ export function fetchJob(id) {
 }
 
 export function createContact(props) {
-  const request = axios.post(`${ROOT_URL}/contact`, props);
+  const request = axios.post(`${API}/contact`, props);
 
   return {
     type: SEND_CONTACT,

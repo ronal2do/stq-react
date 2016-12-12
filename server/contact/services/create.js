@@ -1,13 +1,10 @@
 var nodemailer = require('nodemailer');
 
-MAILGUN_USERNAME='postmaster@sandbox67c118365e564798a8864434e4b2a3cb.mailgun.org'
-MAILGUN_PASSWORD='ed49d942fd9e6c11208ee3aacb29df9d'
-
 var transporter = nodemailer.createTransport({
   service: 'Mailgun',
   auth: {
-    user: MAILGUN_USERNAME,
-    pass: MAILGUN_PASSWORD
+    user: process.env.MAILGUN_USERNAME,
+    pass: process.env.MAILGUN_PASSWORD
   }
 });
 
@@ -38,12 +35,17 @@ exports.contactPost = function(req, res) {
 
   var mailOptions = {
     from: req.body.name + ' ' + '<'+ req.body.email + '>',
-    to: 'ronal2do@gmail.com',
+    to: process.env.SUBJECT_MAIL,
     subject: '_stq site',
     text: req.body.message
   };
 
   transporter.sendMail(mailOptions, function(err) {
-    console.log('foi');
+    if (errors) {
+      return res.status(400).send(errors);
+      console.log('não foi');
+
+    }
+    console.log('Enviado para', mailOptions.to);
   });
 };
