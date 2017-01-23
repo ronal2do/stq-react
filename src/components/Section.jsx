@@ -7,16 +7,18 @@ import './Parallax.css';
 
 class Section extends Component {
   render() {
+    const { job } = this.props;
+
     return (
       <Parallax
         strength={400}
         log={true}
-        bgImage={this.props.bg} >
+        bgImage={job.cover} >
         <div className="container">
-          {this.props.children}
-          <Link className="h2" to={`/campanhas/${this.props.id}`}>[+]</Link>
+          <h1 className="h1">{job.title}</h1>
+          <h4 className="h4">{job.slogan}</h4>
+          <Link className="h2" to={`/campanhas/${job._id}`}>[+]</Link>
         </div>
-
       </Parallax>
     );
   }

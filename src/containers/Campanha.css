@@ -19,7 +19,7 @@
 .inner-titulo {
     text-align: left;
     position: relative;
-    width: 91%;
+    width: 90vw;
     height: 100%;
 }
 .segundo-titulo {
@@ -31,16 +31,23 @@
 }
 .overlay-azul {
     background-color: rgba(0, 43, 69, 0.9);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 @media (min-width: 1200px){
   .padded {
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding: 80px 120px ;
   }
 }
 @media (min-width: 768px){
   .padded {
-      padding-top: 70px;
-      padding-bottom: 70px;
+      padding: 70px 50px;
   }
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

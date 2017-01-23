@@ -80,7 +80,7 @@ class Form extends Component {
                       <div className="row text-left" style={{ textAlign: 'left'}}>
                           <div className="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 left">
                               <p>_</p>
-                              <p>rua gomes de carvalho 921, 5º andar _são paulo</p>
+                              <p>rua michigan 120, _são paulo</p>
                               <p>+55 11 2337-2341<br />_<br />contato@stqpublicidade.com.br<br />_<br />_</p>
                           </div>
                       </div>

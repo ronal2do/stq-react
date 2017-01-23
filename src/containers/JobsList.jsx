@@ -16,17 +16,10 @@ class JobsList extends Component {
   }
 
   renderList() {
-    return this.props.jobs.map((job) => {
-      return (
-        <Section
-          key={job._id}
-          id={job._id}
-          bg={`http://stqpublicidade.com.br/images/site/` + job.slug + `.jpg`}
-          slug={job.slug}>
-          <h1 className="h1">{job.title}</h1>
-          <h4 className="h4">{job.slogan}</h4>
-        </Section>
-        );
+    const { jobs } = this.props;
+
+    return jobs.map((job, key) => {
+      return <Section key={job._id} job={job} />;
     });
 
   }

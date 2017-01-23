@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import Audio from './Audio';
 import VideoComponent from './VideoComponent';
@@ -12,68 +12,67 @@ import './Pieces.css';
 
 export default class Piece extends Component {
   render() {
-    const { title, type, file, classe, text } = this.props;
-    // const minhaClasse = "center " + classe;
+    const { piece } = this.props;
 
     let Piece;
-    if (type === 'audio') {
+    if (piece.type === 'audio') {
       Piece = (
         <Audio
-          title={title}
-          file={file}
-          text={text}
+          title={piece.title}
+          file={piece.file}
+          text={piece.text}
         />
       )
-    } else if (type === 'video') {
+    } else if (piece.type === 'video') {
       Piece = (
         <VideoComponent
-          title={title}
-          file={file}
+          title={piece.title}
+          file={piece.file}
         />
       )
-    } else if (type === 'image') {
+    } else if (piece.type === 'image') {
       Piece = (
         <Image
-          title={title}
-          file={file}
+          title={piece.title}
+          file={piece.file}
         />
       )
-    } else if (type === 'imagedupla') {
+    } else if (piece.type === 'imagedupla') {
       Piece = (
         <ImageDupla
-          title={title}
-          text={text}
-          file={file}
-          type={type}
+          title={piece.title}
+          text={piece.text}
+          file={piece.file}
+          type={piece.type}
         />
       )
-    } else if (type === 'imagetripla') {
+    } else if (piece.type === 'imagetripla') {
       Piece = (
         <ImageTripla
-          title={title}
-          text={text}
-          file={file}
-          type={type}
+          title={piece.title}
+          text={piece.text}
+          file={piece.file}
+          type={piece.type}
         />
       )
-    } else if (type === 'imagefull') {
+    } else if (piece.type === 'imagefull') {
       Piece = (
-        <img src={file} style={{verticalAlign: 'middle', maxWidth: '100%', height: 'auto'}} alt={title} />
+        <img src={piece.file} style={{verticalAlign: 'middle', maxWidth: '100%', height: 'auto'}} alt={piece.title} />
       )
-    } else if (type === 'frase'){
+    } else if (piece.type === 'frase'){
       Piece = (
         <Frase
-          title={title}
-          file={file}
-          text={text}
+          title={piece.title}
+          file={piece.file}
+          text={piece.text}
         />
       )
-    } else if (type === 'fraseimage'){
+    } else if (piece.type === 'fraseimage'){
       Piece = (
         <FraseImage
-          title={title}
-          file={file}
-          text={text}
+          title={piece.title}
+          file={piece.file}
+          text={piece.text}
         />
       )
     } else {
@@ -82,15 +81,9 @@ export default class Piece extends Component {
 
 
     return (
-      <section className={`center ` + classe}>
+      <section className={`center ` + piece.classe}>
           {Piece}
       </section>
     );
   }
 }
-
-Piece.propTypes = {
-  title: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  classe: PropTypes.string
-};

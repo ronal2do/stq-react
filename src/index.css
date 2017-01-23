@@ -280,12 +280,6 @@ h4 {
   text-align: left;
   padding:0 5%;}
 }
-.inner-titulo{
-  text-align: left;
-  position:relative;
-  width:91%;
-  height:101%;
-}
 
 .embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
   position: absolute;

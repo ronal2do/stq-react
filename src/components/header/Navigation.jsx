@@ -1,4 +1,3 @@
-//Button: onClick={()=>{dispatch(changeColor())}}
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
@@ -13,16 +12,20 @@ class Navigation extends Component {
         <div className="Menu-wrap row">
 
           <div className="col-sm-6 ">
-              <div className="h1 titulo text-align-left">
+              {/* <div className="h1 titulo text-align-left">
                 <h2 className="stq">stq</h2> <br />
                 <ul className="Bad">
                   <li><strong>_Branding</strong></li>
                   <li><strong>_Advertising</strong></li>
                   <li><strong>_Digital</strong></li>
                 </ul>
-              </div>
-              <p>contato@stqpublicidade.com <br />+55 11 2337-2341</p>
-              <p>rua gomes de carvalho, 921 <br />5º andar <br />são paulo, sp</p>
+              </div> */}
+              <p style={{fontSize: 15, padding: 15}}>
+                Nosso ponto de partida foi em 1996. Marcamos presença em Brasília, Alagoas, Pernambuco, Rio Grande do Sul, Maranhão, Santa Catarina e São Paulo. Conquistamos clientes, prêmios e, sobretudo, parceiros. Chamaram-nos de integrada, global, full, 360. Evoluímos, crescemos e nos reinventamos. Hoje somos branding: construímos e consolidamos marcas. Somos advertising: despertamos sentidos e miramos em resultados. E somos digital: modernizamos conceitos e compartilhamos conteúdos relevantes. Com estratégia e criatividade, fazemos gestão de comunicação.
+                 <br/> Da sua comunicação.
+                <br/> Seja bem-vindo.
+              </p>
+
           </div>
 
           <div className="col-sm-6">

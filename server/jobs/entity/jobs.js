@@ -34,7 +34,7 @@ var Jobs = new mongoose.Schema({
         type: String,
         required: true
     },
-    bg: {
+    cover: {
         type: String,
         required: true
     },
