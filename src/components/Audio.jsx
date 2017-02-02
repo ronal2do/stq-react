@@ -6,7 +6,7 @@ export default class Audio extends React.Component {
     return (
       <div className="container">
       <div className="row">
-        <div className="col-sm-4 wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+        <div className="col-sm-4 wow fadeInUp animated" style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
           <div className="segundo-titulo">
               <p className="azul maior">_</p>
               <p className="azul"></p>
@@ -15,7 +15,7 @@ export default class Audio extends React.Component {
                   <br />_<br />_</span></p>
           </div>
         </div>
-        <div className="col-sm-8 wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+        <div className="col-sm-8 wow fadeInUp animated" style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
           <div className="padding-cem"></div>
           <div className="padding"></div>
           <audio controls="controls" style={{width: '100%'}} className="grade">

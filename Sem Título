@@ -1,0 +1,56 @@
+{
+    "_id" : ObjectId("584edc5b59f29233ba6d8133"),
+    "title" : "somos são bernardo",
+    "slug" : "somos-sao-bernardo",
+    "slogan" : "Prefeitura de São Bernardo do Campo e o seu novo posicionamento.",
+    "action" : "Estratégia focada no digital com hotsite abrigando principais obras e programa, vídeos testemunhais impulsionados, postagens relacionando pessoas e realizações, apoio de jingle e OOH divulgando hotsite e #somossbc.\rResultado: Orgulho manifesto por obras como o Hospital de Clínicas e os Centros Educacionais Unificados (CEU). Avaliação positiva de prefeito e prefeitura. Campanha premiada no ABC.\r",
+    "challenge" : "Fortalecer o vínculo das pessoas com a cidade e a prefeitura",
+    "description" : "Fortalecer o vínculo das pessoas com a cidade e a prefeitura",
+    "cover" : "somos"
+    "pieces" : [
+
+    ],
+    "__v" : NumberInt(0),
+}
+
+
+
+{ 
+    "_id" : ObjectId("584edc5b59f29233ba6d8133"),
+    "title" : "somos são bernardo",
+    "slug" : "somos-sao-bernardo",
+    "slogan" : "Prefeitura de São Bernardo do Campo e o seu novo posicionamento.",
+    "action" : "Estratégia focada no digital com hotsite abrigando principais obras e programa, vídeos testemunhais impulsionados, postagens relacionando pessoas e realizações, apoio de jingle e OOH divulgando hotsite e #somossbc.\rResultado: Orgulho manifesto por obras como o Hospital de Clínicas e os Centros Educacionais Unificados (CEU). Avaliação positiva de prefeito e prefeitura. Campanha premiada no ABC.\r",
+    "challenge" : "Fortalecer o vínculo das pessoas com a cidade e a prefeitura",
+    "description" : "Falar mais de uma cidade, suas realizações e seus cidadãos. A partir deste tripé, foram destacados depoimentos verdadeiros e versões de fatos reais trazendo pessoas que experimentaram pequenas grandes mudanças em suas vidas por conta de um programa ou equipamento público. A campanha se apoiou no OOH e nas redes sociais, falando das obras, provocando o engajamento, compartilhando histórias, processo que despertou na população sentimentos de autoestima e de reconhecimento das conquistas produzidas pela participação cidadã.",
+    "cover" : "/images/site/somos.jpg",
+    "pieces" : [
+       {
+           "_id" : "980938210",
+           "type" : "fraseimage",
+           "title" : "_mister mão",
+           "classe" : "fundo-cinza",
+           "text" : "Personagem nomeado como Mister Mão, criado para deixar a campanha mais próxima do seu público.",
+           "slug" : "travessia",
+           "file" : "http://stqpublicidade.com.br/images/portfolio/travessia/mm6.jpg"
+       },
+       {
+           "_id" : "980938210123",
+           "title" : "frase",
+           "type" : "frase",
+           "classe" : "fundo-cinza grade",
+           "text" : "Uma obra complexa, de longo prazo, que provocou transtornos e incidiu num histórico problema. Era preciso criar uma identidade para esse programa, apresentá-lo como um processo e fazer com que a cidade dele se apropriasse. Para tanto, incidiu-se em duas frentes, uma conversando com toda a cidade, outra detalhando intervenções nos bairros diretamente aos seus moradores. Nas regiões onde as obras foram concluídas, o reconhecimento e a aprovação foram quase unânimes.",
+           "slug" : "travessia"
+       },
+       {
+           "_id" : "980938210",
+           "type" : "fraseimage",
+           "title" : "_mister mão",
+           "classe" : "fundo-cinza",
+           "text" : "Personagem nomeado como Mister Mão, criado para deixar a campanha mais próxima do seu público.",
+           "slug" : "travessia",
+           "file" : "http://stqpublicidade.com.br/images/portfolio/travessia/mm6.jpg"
+       }
+     ],
+    "__v" : NumberInt(0)
+}

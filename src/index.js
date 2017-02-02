@@ -8,7 +8,7 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import routes from './routes';
-import hashLinkScroll from './utils/hashLinkScroll';
+// import hashLinkScroll from './utils/hashLinkScroll';
 
 import './index.css';
 
@@ -18,6 +18,9 @@ const createStoreWithMiddleware = applyMiddleware(
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router history={browserHistory} routes={routes} onUpdate={hashLinkScroll} />
+    <Router history={browserHistory}
+      routes={routes}
+      // onUpdate={hashLinkScroll} 
+      />
   </Provider>
 , document.querySelector('#root'));

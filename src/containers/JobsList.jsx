@@ -1,49 +1,55 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-import { fetchJobs } from '../actions/index';
+import { getCampaignsList } from '../utils/api';
 
 import Hero from '../components/header/Hero';
 import Section from '../components/Section';
-import '../components/Section.css';
-
-// {job.pieces.map(pieces => {return (<li key={pieces.id}>{pieces.name}</li>)})}
+import Clients from '../components/Clients';
 
 class JobsList extends Component {
-  componentWillMount() {
-    const { fetchJobs } = this.props;
-    fetchJobs();
+  state = {
+    campaigns: []
   }
 
-  renderList() {
-    return this.props.jobs.map((job) => {
-      return (
-        <Section
-          key={job._id}
-          id={job._id}
-          bg={`http://stqpublicidade.com.br/images/site/` + job.slug + `.jpg`}
-          slug={job.slug}>
-          <h1 className="h1">{job.title}</h1>
-          <h4 className="h4">{job.slogan}</h4>
-        </Section>
-        );
-    });
+  componentDidMount = () => {
+    console.log('opa');
+    this.getCampaigns();
+  };
 
-  }
+  getCampaigns = async () => {
+    console.log('pega =>');
+    try {
+      const { campaigns } = await getCampaignsList();
+
+      console.log(campaigns);
+
+      this.setState({
+        campaigns,
+      });
+    } catch(err) {
+      console.log('Jobs err:', err);
+    }
+  };
 
   render() {
+    const { campaigns } = this.state;
     return (
       <section>
         <Hero />
         <div id="trabalhos"></div>
-        { this.renderList() }
+          { campaigns.map((campaign, key) => {
+              return (
+                <Section key={campaign._id} campaign={campaign}>
+                  <h1 className="h1">{campaign.title}</h1>
+                  <h4 className="h4">{campaign.slogan}</h4>
+                </Section>
+              );
+            })
+          }
+        <Clients />
       </section>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return { jobs: state.jobs.all };
-}
-
-export default connect(mapStateToProps, { fetchJobs })(JobsList);
+export default JobsList;

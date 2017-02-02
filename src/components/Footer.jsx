@@ -17,7 +17,7 @@ export default class Footer extends Component {
           </div>
           <div className="col-sm-6 col-xs-12">
               <div className="Footer-copyright">
-                  <p>© stq 1996 - 2016, Todos os direitos reservados.</p>
+                  <p>© stq 1996 - 2017, Todos os direitos reservados.</p>
               </div>
           </div>
         </div>

@@ -1,5 +1,8 @@
 import React from 'react';
-import { GoogleMapLoader, GoogleMap } from "react-google-maps";
+import {
+  GoogleMapLoader,
+  GoogleMap
+} from "react-google-maps";
 
 export default function Mapa (props) {
   return (

@@ -1,4 +1,3 @@
-//Button: onClick={()=>{dispatch(changeColor())}}
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
@@ -21,16 +20,24 @@ class Navigation extends Component {
                   <li><strong>_Digital</strong></li>
                 </ul>
               </div>
-              <p>contato@stqpublicidade.com <br />+55 11 2337-2341</p>
-              <p>rua gomes de carvalho, 921 <br />5º andar <br />são paulo, sp</p>
+              <p>
+                Nosso ponto de partida foi em 1996.
+                Marcamos presença em Brasília, Alagoas, Pernambuco, Rio Grande do Sul, Maranhão, Santa Catarina e São Paulo.
+                Conquistamos clientes, prêmios e, sobretudo, parceiros. Chamaram-nos de integrada, global, full, 360.
+                Evoluímos, crescemos e nos reinventamos. Hoje somos B de branding: construímos e consolidamos marcas.
+                Somos A de advertising: despertamos sentidos e miramos em resultados.
+                E somos D de digital: modernizamos conceitos e compartilhamos conteúdos relevantes.
+                Com estratégia e criatividade, somos BAD e fazemos gestão de comunicação. Da sua comunicação.
+                Venha ser BAD com a stq.
+              </p>
           </div>
 
           <div className="col-sm-6">
             <br/>
             <ul className="navigation skillsDouble">
                   <li><Link className="scroll-to" to="/" >_home</Link></li>
-                  <li><Link className="scroll-to" to="/#trabalhos" >_trabalhos</Link></li>
-                  <li><Link className="scroll-to" to="/#contato" >_contato</Link></li>
+                  <li><Link className="scroll-to" to="/" >_trabalhos</Link></li>
+                  <li><Link className="scroll-to" to="/" >_contato</Link></li>
                   <li>
                   <br />
                       <a className="icone-social" href="https://www.facebook.com/STQPublicidade/" target="_blank"><i className="fa fa-facebook fa-fw"></i></a>

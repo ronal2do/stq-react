@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 
 import './App.css';
-
 import Contact from '../containers/Contact';
-
 import Header from '../components/header';
-
 import Footer from '../components/Footer';
 
 class App extends Component {

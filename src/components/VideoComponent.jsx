@@ -10,12 +10,10 @@ export default class VideoComponent extends React.Component {
           <YoutubePlayer
               videoId={file}
               playbackState='unstarted'
-              configuration={
-                  {
-                      showinfo: 0,
-                      controls: 0
-                  }
-              }
+              configuration={{
+                showinfo: 0,
+                controls: 0
+              }}
           />
         </div>
       </div>

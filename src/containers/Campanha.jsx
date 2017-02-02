@@ -1,27 +1,54 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchJob } from '../actions/index';
+
+import { getCampaignsList } from '../utils/api';
 
 import './Campanha.css';
 
-import Piece from '../components/Piece';
+// import Piece from '../components/Piece';
 
 class Campanha extends Component {
-  constructor(props) {
-    super(props);
+  state = { campaign: [], isLoading: true }
 
-    this.state = { };
+  componentDidMount() {
+    const { _id } = this.props.params;
+
+    this.getCampaign(_id);
+    console.log(this.getCampaign(_id));
   }
-  componentWillMount() {
-    this.props.fetchJob(this.props.params.id);
-  }
+
+  getCampaign = async (_id) => {
+    console.log('vamos buscar');
+    try {
+      const { campaign } = await getCampaignsList(_id);
+      console.log('try ==> ', campaign);
+      this.setState({
+        campaign: {
+          ...campaign,
+          // image: getImageUrl(campaign.image),
+        },
+        isLoading: false,
+      });
+    } catch (err) {
+      console.log('GET Campaign err:', err);
+
+      this.setState({
+        isLoading: false,
+      });
+
+      this.context.showSnackbar({
+        message: err.message,
+      });
+    }
+  };
+
   render() {
-    const job = this.props.job;
+    const { campaign, isLoading } = this.state;
 
-    if (!this.props.job) {
+    if (isLoading) {
        return <div>is loading...</div>;
     }
-    const bgImage = { backgroundImage: 'url(/images/site/' + job.slug + '.jpg)' };
+
+    const bgImage = { backgroundImage: `url(${campaign.image})` };
 
     return (
       <div>
@@ -30,36 +57,59 @@ class Campanha extends Component {
               <div className="segundo-titulo">
                   <div className="padding"></div>
                   <div className="padding"></div>
-                  <h2 className="titulo verde">{job.title}</h2>
+                  <h2 className="titulo verde">{campaign.title}</h2>
                   <p className="branco maior">_</p>
                   <p className="branco"></p>
-                  <h4 className="branco">{job.title}<br /></h4>
-                  <p><span className="branco maior">{job.slogan}.<br />_<br />_</span></p>
+                  <h4 className="branco">{campaign.title}<br /></h4>
+                  <p><span className="branco maior">{campaign.slogan}.<br />_<br />_</span></p>
+              </div>
+              <div className="center">
+                <a className="icon-scroll skrollable skrollable-between" href="#section2" style={{opacity: '1'}}>
+                    [v]
+                </a>
               </div>
           </div>
-          <a className="icon-scroll skrollable skrollable-between" href="#section2" data-0="opacity: 1;" data-100="opacity: 0;" style={{opacity: '1'}}>
-              [v]
-          </a>
+
       </section>
-        {job.pieces.map(pieces => {
-          return (
-            <Piece
-              key={pieces.key}
-              title={pieces.title}
-              type={pieces.type}
-              file={pieces.file}
-              classe={pieces.classe}
-              text={pieces.text}
-            />
-          )
-        })}
+
+
+      <div className="container">
+          <div className="row">
+            <div className="col-sm-6 wow fadeInUp animated"
+                style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                <div className="segundo-titulo">
+                    <div className="padding"></div>
+                    <div className="padding"></div>
+                    <p className="azul maior">_</p>
+                    <p className="azul"></p>
+                    <h4 className="azul" style={{color: 'white'}}>Desafio<br/></h4>
+                    <p><span className="azul maior" style={{color: 'white'}}>{campaign.challenge}<br/>_<br/>_</span></p>
+                </div>
+            </div>
+              <div className="col-sm-6 wow fadeInUp animated"
+                  style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                  <div className="segundo-titulo">
+                      <div className="padding"></div>
+                      <div className="padding"></div>
+                      <p className="azul maior">_</p>
+                      <p className="azul"></p>
+                      <h4 className="azul" style={{color: 'white'}}>Ação<br/></h4>
+                      <p><span className="azul maior" style={{color: 'white'}}>{campaign.action}<br/>_<br/>_</span></p>
+                  </div>
+              </div>
+          </div>
+          <div className="padding-cem"></div>
+      </div>
+      {/* {!isLoading ? (
+        <div>
+          {campaign.pieces.map((piece, key) => {
+            return campaign.pieces.length > 0 ? ( <Piece key={piece._id} piece={piece} /> ) : <div className="container"><p>Sem dados</p></div> ;
+          })}
+        </div>
+        ) :null} */}
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return { job: state.jobs.job }
-}
-
-export default connect(mapStateToProps, { fetchJob })(Campanha);
+export default Campanha;
