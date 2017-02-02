@@ -8,6 +8,7 @@ import './Parallax.css';
 class Section extends Component {
   render() {
     const { campaign } = this.props
+
     return (
       <Parallax
         strength={400}
@@ -17,7 +18,6 @@ class Section extends Component {
           {this.props.children}
           <Link className="h2" to={`/campanhas/${campaign._id}`}>[+]</Link>
         </div>
-
       </Parallax>
     );
   }

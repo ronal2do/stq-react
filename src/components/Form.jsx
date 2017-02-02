@@ -60,6 +60,7 @@ class Form extends Component {
                   <p>rua michigan 120, _são paulo</p>
                   <p>+55 11 2337-2341<br />_<br />contato@stqpublicidade.com.br<br />_<br />_</p>
                 </div>
+
               </div>
             </form>
           </div>

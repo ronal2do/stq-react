@@ -26,9 +26,11 @@ export default class Contact extends Component {
   }
 
   render() {
-    const active = this.state.radio ? 'active' : ' ';
-    const opacity = this.state.form ? '' : 'opacity';
-    const mapa = this.state.mapa ? 'mapa-ativo' : 'mapa';
+    const { radio, form, mapa } = this.state;
+
+    const active = radio ? 'active' : ' ';
+    const opacity = form ? '' : 'opacity';
+    const mapi = mapa ? 'mapa-ativo' : 'mapa';
     return (
       <section id="contato" className="contact center">
 
@@ -45,10 +47,10 @@ export default class Contact extends Component {
             <Form />
         </div>
 
-
-        <div id="map" className={`clearfix ${mapa}`}>
-          <Mapa lat={-23.5985647} lng={-46.6822518} />
+        <div id="map" className={`clearfix ${mapi}`}>
+          <Mapa lat={-23.6174691} lng={-46.6826591} />
         </div>
+
 
       </section>
 

@@ -72,34 +72,75 @@ class Campanha extends Component {
 
       </section>
 
-
-      <div className="container">
-          <div className="row">
-            <div className="col-sm-6 wow fadeInUp animated"
-                style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
-                <div className="segundo-titulo">
-                    <div className="padding"></div>
-                    <div className="padding"></div>
-                    <p className="azul maior">_</p>
-                    <p className="azul"></p>
-                    <h4 className="azul" style={{color: 'white'}}>Desafio<br/></h4>
-                    <p><span className="azul maior" style={{color: 'white'}}>{campaign.challenge}<br/>_<br/>_</span></p>
-                </div>
-            </div>
-              <div className="col-sm-6 wow fadeInUp animated"
+      { campaign.result ? (
+        <div className="container">
+            <div className="row">
+              <div className="col-sm-4 wow fadeInUp animated"
                   style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
                   <div className="segundo-titulo">
                       <div className="padding"></div>
                       <div className="padding"></div>
                       <p className="azul maior">_</p>
                       <p className="azul"></p>
-                      <h4 className="azul" style={{color: 'white'}}>Ação<br/></h4>
-                      <p><span className="azul maior" style={{color: 'white'}}>{campaign.action}<br/>_<br/>_</span></p>
+                      <h4 className="azul" style={{color: 'white'}}>Desafio<br/></h4>
+                      <p><span className="azul maior" style={{color: 'white'}}>{campaign.challenge}<br/>_<br/>_</span></p>
                   </div>
               </div>
+                <div className="col-sm-4 wow fadeInUp animated"
+                    style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                    <div className="segundo-titulo">
+                        <div className="padding"></div>
+                        <div className="padding"></div>
+                        <p className="azul maior">_</p>
+                        <p className="azul"></p>
+                        <h4 className="azul" style={{color: 'white'}}>Ação<br/></h4>
+                        <p><span className="azul maior" style={{color: 'white'}}>{campaign.action}<br/>_<br/>_</span></p>
+                    </div>
+                </div>
+                <div className="col-sm-4 wow fadeInUp animated"
+                    style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                    <div className="segundo-titulo">
+                        <div className="padding"></div>
+                        <div className="padding"></div>
+                        <p className="azul maior">_</p>
+                        <p className="azul"></p>
+                        <h4 className="azul" style={{color: 'white'}}>Resultado<br/></h4>
+                        <p><span className="azul maior" style={{color: 'white'}}>{campaign.result}<br/>_<br/>_</span></p>
+                    </div>
+                </div>
+            </div>
+            <div className="padding-cem"></div>
+        </div>
+        ):(
+          <div className="container">
+              <div className="row">
+                <div className="col-sm-6 wow fadeInUp animated"
+                    style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                    <div className="segundo-titulo">
+                        <div className="padding"></div>
+                        <div className="padding"></div>
+                        <p className="azul maior">_</p>
+                        <p className="azul"></p>
+                        <h4 className="azul" style={{color: 'white'}}>Desafio<br/></h4>
+                        <p><span className="azul maior" style={{color: 'white'}}>{campaign.challenge}<br/>_<br/>_</span></p>
+                    </div>
+                </div>
+                  <div className="col-sm-6 wow fadeInUp animated"
+                      style={{visibility:'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
+                      <div className="segundo-titulo">
+                          <div className="padding"></div>
+                          <div className="padding"></div>
+                          <p className="azul maior">_</p>
+                          <p className="azul"></p>
+                          <h4 className="azul" style={{color: 'white'}}>Ação<br/></h4>
+                          <p><span className="azul maior" style={{color: 'white'}}>{campaign.action}<br/>_<br/>_</span></p>
+                      </div>
+                  </div>
+              </div>
+              <div className="padding-cem"></div>
           </div>
-          <div className="padding-cem"></div>
-      </div>
+      )}
+
       {/* {!isLoading ? (
         <div>
           {campaign.pieces.map((piece, key) => {

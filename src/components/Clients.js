@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { css } from 'glamor';
+import shuffle from '../utils/shuffle'
 
 import px from '../images/logos/2000px-Indian_Motorcycle_logo.svg.png'
 import ademi from '../images/logos/ademi.jpg'
+import aaa from '../images/logos/2017-02-02.jpg'
+import bb from '../images/logos/2017-02-02-1.jpg'
 import atlanticahotels from '../images/logos/atlanticahotels.jpg'
 import cartaz from '../images/logos/cartaz-inss-logo.png'
 import Cerutti from '../images/logos/Cerutti.jpg'
@@ -22,11 +25,12 @@ import prefeitura from '../images/logos/prefeitura-de-maceio-logo-horizontal.png
 import sagavw from '../images/logos/sagavw.png'
 import Sem_t_tulo from '../images/logos/Sem_t_tulo.png'
 import shineray from '../images/logos/shineray.png'
+import aawe from '../images/logos/2017-02-02.png'
 
 const Imgns = [
   {'id': 1, source: `${ademi}`},
   {'id': 2, source: `${px}`},
-  {'id': 3, source: `${ademi}`},
+  {'id': 3, source: `${aaa}`},
   {'id': 4, source: `${atlanticahotels}`},
   {'id': 5, source: `${cartaz}`},
   {'id': 6, source: `${Cerutti}`},
@@ -46,9 +50,8 @@ const Imgns = [
   {'id': 20, source: `${sagavw}`},
   {'id': 21, source: `${Sem_t_tulo}`},
   {'id': 22, source: `${shineray}`},
-  {'id': 23, source: `${prefeitura}`},
-  {'id': 24, source: `${prefeitura}`},
-  {'id': 25, source: `${marca_governo}`},
+  {'id': 23, source: `${aawe}`},
+  {'id': 24, source: `${bb}`},
 ];
 
 const container = css({
@@ -65,7 +68,7 @@ const wrap = css({
 
 const client = css({
   // width: '100%',
-  maxWidth: 'calc(100vw / 7)',
+  maxWidth: 'calc(1200px / 6)',
   height: 'auto',
   padding: '10px 40px',
 })
@@ -76,7 +79,7 @@ class Clients extends Component {
     return (
       <div className={container} {...css({background: 'white'})}>
         <div className={wrap}>
-          { Imgns.map((imgn, key) => {
+          { shuffle(Imgns).map((imgn, key) => {
               return (
                 <img className={client} key={imgn.id} src={imgn.source} alt={imgn.source} />
               );

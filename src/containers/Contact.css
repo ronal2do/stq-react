@@ -257,6 +257,7 @@ button[disabled], html input[disabled] {
 .map-overlay {
     background: rgba(0,43,69,.9);
     padding-bottom: 130px;
+    width: 100vw;
 }
 @media (min-width: 1200px){
   .map-overlay {
